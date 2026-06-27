@@ -3,6 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2258621204527940');
+fbq('track','PageView');
+fbq('track','ViewContent',{
+  content_name:'Estruturas de Tráfego para Advogados',
+  content_ids:['W106489072E'],
+  content_type:'product',
+  value:67.00,
+  currency:'BRL'
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2258621204527940&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
 <title>Estruturas de Tráfego para Advogado</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -415,7 +440,7 @@ footer .dis{max-width:760px;margin:0 auto;color:#b9b9b9;font-size:12px}
       <div class="by">Por apenas:</div>
       <div class="big">9x de R$ 8,80</div>
       <div class="cash">ou <b style="color:var(--brown)">R$ 67,00</b> à vista</div>
-      <a class="btn" href="#checkout">QUERO COMPRAR AGORA<span class="small">Acesso imediato no seu e-mail</span></a>
+      <a class="btn" href="https://pay.hotmart.com/W106489072E" onclick="pgCheckout(event)">QUERO COMPRAR AGORA<span class="small">Acesso imediato no seu e-mail</span></a>
       <div class="guarantee">
         <svg viewBox="0 0 64 64" aria-label="Compra segura"><rect x="16" y="28" width="32" height="24" rx="4" fill="none" stroke="#049A6A" stroke-width="4"/><path d="M24 28v-6a8 8 0 0 1 16 0v6" fill="none" stroke="#049A6A" stroke-width="4"/><circle cx="32" cy="40" r="3.4" fill="#049A6A"/></svg>
         <span>Compra 100% segura · pagamento criptografado</span>
@@ -494,7 +519,7 @@ footer .dis{max-width:760px;margin:0 auto;color:#b9b9b9;font-size:12px}
       <div class="by">Por apenas:</div>
       <div class="big">9x de R$ 8,80</div>
       <div class="cash">ou <b style="color:var(--brown)">R$ 67,00</b> à vista</div>
-      <a class="btn" href="#checkout">QUERO COMPRAR AGORA<span class="small">Acesso imediato no seu e-mail</span></a>
+      <a class="btn" href="https://pay.hotmart.com/W106489072E" onclick="pgCheckout(event)">QUERO COMPRAR AGORA<span class="small">Acesso imediato no seu e-mail</span></a>
       <div class="guarantee">
         <svg viewBox="0 0 64 64" aria-label="Compra segura"><rect x="16" y="28" width="32" height="24" rx="4" fill="none" stroke="#049A6A" stroke-width="4"/><path d="M24 28v-6a8 8 0 0 1 16 0v6" fill="none" stroke="#049A6A" stroke-width="4"/><circle cx="32" cy="40" r="3.4" fill="#049A6A"/></svg>
         <span>Compra 100% segura · pagamento criptografado</span>
@@ -530,6 +555,24 @@ footer .dis{max-width:760px;margin:0 auto;color:#b9b9b9;font-size:12px}
   <div>Copyright © Daniel Padilha · Tráfego para Advogados · 2026 — Todos os direitos reservados.</div>
   <p class="dis" style="margin-top:14px">Este site não é afiliado ao Facebook/Meta nem ao Google e não representa nenhuma dessas empresas. A compra deste material não garante nenhum tipo de resultado; os resultados dependem da aplicação de cada um. Fazemos todos os esforços para indicar com clareza o que está sendo oferecido.</p>
 </footer>
+
+<script>
+function pgCheckout(e){
+  if(e) e.preventDefault();
+  if(window.fbq){
+    fbq('track','AddToCart',{
+      content_name:'Estruturas de Tráfego para Advogados',
+      content_ids:['W106489072E'],
+      content_type:'product',
+      value:67.00, currency:'BRL'
+    });
+  }
+  var url='https://pay.hotmart.com/W106489072E?src=lp-estruturas';
+  var fbclid=new URLSearchParams(location.search).get('fbclid');
+  if(fbclid) url+='&fbclid='+encodeURIComponent(fbclid);
+  setTimeout(function(){window.location.href=url;},300);
+}
+</script>
 
 </body>
 </html>
